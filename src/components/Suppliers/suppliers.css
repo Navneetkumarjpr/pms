@@ -1,0 +1,45 @@
+.supplyhead{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.supplyaddd{
+    width: fit-content;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(26, 26, 94);
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    color: white;
+}
+.supplyaddd>i{
+    margin-right: 0.5rem;
+    /* margin-top: 0.5rem; */
+}
+.supplyaddd>h6{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.supplubuttoncontainer{
+    display: flex;
+    justify-content: end;
+}
+
+.supplypage{
+    padding: 2rem 2rem;
+    background-color: rgb(253, 252, 251);
+    margin: 0rem 1.5rem;
+    margin-top: 1.5rem;
+    border-radius: 10px;
+}
+
+.editbutton{
+    font-size: 1.1rem;
+}
+.editbutton>i{
+    margin-right: 0.5rem;
+}

@@ -1,0 +1,29 @@
+.dashhead{
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+}
+
+.dashboardpage{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 4rem;
+    row-gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dashcard{
+    background-color:rgb(255, 253, 253);
+    display: flex;
+    margin-left: 1.5rem;
+    /* margin-right: auto; */
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 3rem 2rem;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.dashcard>h5{
+    color: gray;
+}
+

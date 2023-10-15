@@ -1,0 +1,33 @@
+
+.menu{
+    width: 25%;
+    border-right: 2px solid black;
+}
+
+.accord{
+    /* border: none; */
+}
+
+.menuicons{
+    margin-right: 0.75rem;
+    font-size: 1.3rem;
+    /* height: 5rem; */
+    
+}
+.menulinks,.menulinkshead{
+    text-decoration: none;
+}
+.menulinks{
+    color: rgb(33, 30, 30);
+    /* background-color: aqua; */
+    /* padding: 1rem; */
+}
+.menuhead{
+    margin-left: 2rem;
+    padding: 0.75rem 0rem;
+}
+
+.accordbody{
+    margin-left: 1.75rem;
+    /* height: 6rem; */
+}

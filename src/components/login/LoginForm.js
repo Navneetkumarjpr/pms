@@ -2,6 +2,7 @@ import { useState } from "react"
 import React from 'react'
 import validator from 'validator'
 import "./loginform.css"
+import { Link } from "react-router-dom"
 
 const loginitialstate={
   email:'',
@@ -127,11 +128,12 @@ const LoginForm = () => {
           {!emailerror && <p>Error in email</p>}
           <input type='password' name="password" value={login.password} onChange={(e)=>values(e)}  placeholder='Enter Password' required/>
           {passworderror.length>=1 && <p>{passworderror}</p>}
-          <button className='loginbutton'>LogIn</button>
+          {/* <button className='loginbutton'>LogIn</button> */}
+          <Link to='/' className='loginbutton'>LogIn</Link>
         </div>
         <div className={`signupform  ${viewsign ?"logvisible":"lognotvisible"}`}>
           <input type='text' name="name" value={signup.name} onChange={(e)=>signupValues(e)} placeholder='Enter Name' required/>
-          {!nameerror && <p>Name length is smaller</p>}
+          {nameerror && <p>Name length is smaller</p>}
           <input type='email' name="email" value={signup.email} onChange={(e)=>signupValues(e)} placeholder='Enter Email' required/>
           {!emailerrorsign && <p>Error in email</p>}
           <input type='password' name="password" value={signup.password} onChange={(e)=>signupValues(e)} placeholder='Enter Password' required/>

@@ -1,0 +1,11 @@
+.adminpage{
+    display: flex;
+    /* width: 50%; */
+    height: 92.2vh;
+}
+
+.dashadminpage{
+    /* background-color: blue; */
+    width: 100%;
+    background-color: rgb(229, 226, 226);
+}
