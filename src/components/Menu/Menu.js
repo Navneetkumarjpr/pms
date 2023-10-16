@@ -33,13 +33,13 @@ const Menu = () => {
       <Accordion.Item eventKey="4">
         <Accordion.Header><i class="fa fa-list-alt menuicons" aria-hidden="true"></i>Manage Category</Accordion.Header>
         <Accordion.Body className='accordbody'>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Category</Link>
+        <Link to='category' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Category</Link>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="5">
         <Accordion.Header><i class="fa fa-product-hunt menuicons" aria-hidden="true"></i>Manage Product</Accordion.Header>
         <Accordion.Body className='accordbody'>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Product</Link>
+        <Link to='manageproduct' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Product</Link>
         </Accordion.Body>
       </Accordion.Item>
       <Accordion.Item eventKey="6">

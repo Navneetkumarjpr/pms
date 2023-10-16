@@ -2,26 +2,26 @@ import React, { useState } from 'react'
 // import "./managecustomers.css"
 import { Link, Outlet,useNavigate } from 'react-router-dom'
 import { Button } from 'bootstrap';
-const UnitAllData = () => {
+const ManageProduct = () => {
     const navigate=useNavigate();
   const [data, setData] = useState([
     {
       name: 'John Doe',
-      mobileNumber: '123-456-7890',
+      supplierName: 'Samsung',
       img:"https://media.istockphoto.com/id/1443305526/photo/young-smiling-man-in-headphones-typing-on-laptop-keyboard.jpg?s=2048x2048&w=is&k=20&c=YbyIE-QkVeacJODEhS5_LQzJahwiTmZTnism-xUwCLA=",
-      email: 'johndoe@example.com',
-      address: '123 Main St',
+      unit: 'PCG',
+      category: 'Smart phone',
     },
     {
       name: 'Jane Smith',
-      mobileNumber: '987-654-3210',
-      email: 'janesmith@example.com',
-      address: '456 Elm St',
+      supplierName: 'Moto',
+      unit: 'KG',
+      category: 'Smart phone',
     },{
       name: 'Jane Smith',
-      mobileNumber: '987-654-3210',
-      email: 'janesmith@example.com',
-      address: '456 Elm St',
+      supplierName: 'Apple',
+      unit: 'PCG',
+      category: 'Smart phone',
     }
     // Add more data as needed
   ]);
@@ -40,14 +40,14 @@ const UnitAllData = () => {
 
   return (
     <>
-    <h4 className='supplyhead'>UNIT ALL</h4>
+    <h4 className='supplyhead'>PRODUCT ALL</h4>
     <div className='supplypage'>
           <div className='supplubuttoncontainer'>
             <Link
-             to='../unitform' 
+             to='../manageproductform' 
              className='supplyaddd'>
             <i class="fa fa-plus-square"></i>
-            <h6>Add Unit</h6>
+            <h6>Add Product</h6>
             </Link>
             {/* <button
             onClick={handleclick}
@@ -56,12 +56,15 @@ const UnitAllData = () => {
             <h6>Add Supplier</h6>
             </button> */}
           </div>
-          <h5>Unit All Data</h5>
+          <h5>Product All Data</h5>
           <table className="table table-striped table-bordered my-4">
       <thead>
         <tr>
           <th width="10%">S.No</th>
-          <th width="70%">Name</th>
+          <th width="20%">Name</th>
+          <th width="20%">Supplier Name</th>
+          <th width="10%">Unit</th>
+          <th width="20%">Category</th>
           <th width="20%">Action</th>
         </tr>
       </thead>
@@ -70,6 +73,9 @@ const UnitAllData = () => {
           <tr key={index}>
             <td>{index + 1}</td>
             <td>{item.name}</td>
+            <td>{item.supplierName}</td>
+            <td>{item.unit}</td>
+            <td>{item.category}</td>
             <td>
               <button
                 className="btn btn-primary btn-sm mx-2 editbutton text-center"
@@ -96,4 +102,4 @@ const UnitAllData = () => {
   )
 }
 
-export default UnitAllData
+export default ManageProduct

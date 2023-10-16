@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 // import "./managecustomers.css"
 import { Link, Outlet,useNavigate } from 'react-router-dom'
 import { Button } from 'bootstrap';
-const UnitAllData = () => {
+const Category = () => {
     const navigate=useNavigate();
   const [data, setData] = useState([
     {
@@ -40,14 +40,14 @@ const UnitAllData = () => {
 
   return (
     <>
-    <h4 className='supplyhead'>UNIT ALL</h4>
+    <h4 className='supplyhead'>CATEGORY ALL</h4>
     <div className='supplypage'>
           <div className='supplubuttoncontainer'>
             <Link
-             to='../unitform' 
+             to='../categoryform' 
              className='supplyaddd'>
             <i class="fa fa-plus-square"></i>
-            <h6>Add Unit</h6>
+            <h6>Add Category</h6>
             </Link>
             {/* <button
             onClick={handleclick}
@@ -56,7 +56,7 @@ const UnitAllData = () => {
             <h6>Add Supplier</h6>
             </button> */}
           </div>
-          <h5>Unit All Data</h5>
+          <h5>Category All Data</h5>
           <table className="table table-striped table-bordered my-4">
       <thead>
         <tr>
@@ -96,4 +96,4 @@ const UnitAllData = () => {
   )
 }
 
-export default UnitAllData
+export default Category
