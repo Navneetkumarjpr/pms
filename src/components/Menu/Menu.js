@@ -45,7 +45,7 @@ const Menu = () => {
       <Accordion.Item eventKey="6">
         <Accordion.Header><i class="fa fa-shopping-cart menuicons" aria-hidden="true"></i>Manage Purchase</Accordion.Header>
         <Accordion.Body className='accordbody'>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Purchase</Link>
+        <Link to='allpurchase' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Purchase</Link>
         <br/>
         <br/>
         <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Approval Purchase</Link>

@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React,{ useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 import { Form } from "react-bootstrap";
 const ManageProductForm = () => {
-    const [supplier, setSupplier] = useState("");
-    const [unit, setUnit] = useState("");
-    const [category, setCategory] = useState("Dictamen");
   const [formData, setFormData] = useState({
     manageproductName:'',
     supplier:'',
@@ -16,13 +13,16 @@ const ManageProductForm = () => {
   const [disableButton, setDisableButton] = useState(true)
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    
+    console.log(value)
     setFormData({ ...formData, [name]: value });
-    console.log(formData)
-    
+    if(formData.manageproductName && formData.category && formData.supplier && formData.unit && !formData.category.includes("placeholder")){
+      setDisableButton(false);
+    }else{
+      setDisableButton(true);
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) => { 
     e.preventDefault();
     // Handle form submission here, e.g., send the data to an API or update your state
     console.log('Form submitted with data:', formData);
@@ -55,16 +55,27 @@ const ManageProductForm = () => {
         //     console.log("e.target.value", e.target.name);
         //     setSupplier(e.target.value);
         //   }}
+        defaultValue={"placeholder"}
         onChange={handleInputChange}
 
         >
+          <option value="placeholder">Select Supplier</option>
           <option value="DICTUM">Dictamen</option>
           <option value="CONSTANCY">Constancia</option>
           <option value="COMPLEMENT">Complemento</option>
         </Form.Control>
       </Form.Group>
 
-      <Form.Group controlId="formBasicSelect1">
+          {/* <select name="supplier" defaultValue={"placeholder"} value={formData.supplier} onChange={handleInputChange}>
+            {options.map((option) => (
+              <option value={option.value}>{option.label}</option>
+            ))}
+            <option  value={"placeholder"}>Select Supplier</option>
+            <option value="DICTUM">Dictamen</option>
+            <option value="CONSTANCY">Constancia</option>
+            <option value="COMPLEMENT">Complemento</option>
+          </select> */}
+        <Form.Group controlId="formBasicSelect1">
         <Form.Label className='fs-5'>Select Unit</Form.Label>
         <Form.Control
         className='my-2'
@@ -79,6 +90,7 @@ const ManageProductForm = () => {
         //     setUnit(e.target.value);
         //   }}
         >
+          <option value={"placeholder"}>Select Unit</option>
           <option value="DICTUM">Dictamen</option>
           <option value="CONSTANCY">Constancia</option>
           <option value="COMPLEMENT">Complemento</option>
@@ -98,6 +110,7 @@ const ManageProductForm = () => {
         //     setCategory(e.target.value);
         //   }}
         >
+          <option value="placeholder">Select Category</option>
           <option value="DICTUM">Dictamen</option>
           <option value="CONSTANCY">Constancia</option>
           <option value="COMPLEMENT">Complemento</option>

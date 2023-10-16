@@ -1,0 +1,16 @@
+.approvedbuttoncolor{
+    background-color: green;
+    color: white;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}
+.pendingbuttoncolor{
+    background-color: rgb(198, 198, 8);
+    color: white;
+    width: fit-content;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+}

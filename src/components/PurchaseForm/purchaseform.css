@@ -1,0 +1,39 @@
+.purchaseformdata{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 4rem;
+    row-gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    background-color: rgb(255, 255, 255);
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+.outerpurchaseform{
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    background-color: rgb(255, 255, 255);
+    /* overflow-y:scroll; */
+}
+.purchase-item{
+    display: flex;
+    align-items: center;
+}
+
+.purchase-item>button{
+    width: fit-content;
+    height: fit-content;
+    /* margin-top: 1rem; */
+}
+.additembutton{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 2rem;
+}
+.outerpurchaseitem{
+    height: 300px;
+    overflow-y: scroll;
+
+}
