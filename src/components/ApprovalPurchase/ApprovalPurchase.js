@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import "./allpurchase.css"
-import { Link } from 'react-router-dom'
+// import "./allpurchase.css"
+import { Link, Outlet,useNavigate } from 'react-router-dom'
 import { Button } from 'bootstrap';
-const AllPurchase = () => {
+const ApprovalPurchase = () => {
+  const navigate=useNavigate();
   const [data, setData] = useState([
     {
       name: 'John Doe',
@@ -13,7 +14,7 @@ const AllPurchase = () => {
       Category:'Manik',
       quantity:'23',
       productName:'Biscuit',
-      status:'Approved',
+      status:'Pending',
       email: 'johndoe@example.com',
       address: '123 Main St',
     },
@@ -38,7 +39,7 @@ const AllPurchase = () => {
         Category:'Manik',
         quantity:'23',
         productName:'Biscuit',
-        status:'Approved',
+        status:'Pending',
         email: 'johndoe@example.com',
         address: '123 Main St',
     }
@@ -51,9 +52,10 @@ const AllPurchase = () => {
     console.log('Edit:', index);
   };
 
-  const handleDelete = (index) => {
+  const handleRight = (index) => {
     // Implement the delete action here
     console.log('Delete:', index);
+    navigate('../allpurchase')
   };
 
   return (
@@ -74,7 +76,7 @@ const AllPurchase = () => {
             <h6>Add Supplier</h6>
             </button> */}
           </div>
-          <h5>Purchase All Data</h5>
+          <h5>Purchase All Pending Data</h5>
           <table className="table table-striped table-bordered my-4">
       <thead>
         <tr>
@@ -99,7 +101,7 @@ const AllPurchase = () => {
             <td>{item.Category}</td>
             <td>{item.quantity }</td>
             <td>{item.productName}</td>
-            <td><h5 className={`${item.status.includes("Approved")?"approvedbuttoncolor":"pendingbuttoncolor"}`}>{item.status.includes("Approved")?<i class="fa fa-check">Approved</i>:<i class="fa fa-clock-o">Pending</i>}</h5></td>
+            <td><h5 className={`${item.status.includes("Pending") && "pendingbuttoncolor"}`}>{item.status}</h5></td>
             <td>
               {/* <button
                 className="btn btn-primary btn-sm mx-2 editbutton"
@@ -110,10 +112,11 @@ const AllPurchase = () => {
               </button> */}
              {item.status.includes("Pending") && <button
                 className="btn btn-danger btn-sm ml-2 editbutton"
-                onClick={() => handleDelete(index)}
+                onClick={() => handleRight(index)}
               >
-                <i class="fa fa-trash-o"></i>
-                Delete
+               
+<i class="fa fa-check"></i>
+                Approve
               </button>}
             </td>
           </tr>
@@ -126,4 +129,4 @@ const AllPurchase = () => {
   )
 }
 
-export default AllPurchase
+export default ApprovalPurchase

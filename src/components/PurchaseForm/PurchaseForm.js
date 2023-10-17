@@ -9,6 +9,7 @@ const PurchaseForm = () => {
     supplierName: '',
     categoryName: '',
     productName: '',
+    status:'Pending'
   });
 
   const [purchaseItems, setPurchaseItems] = useState([
@@ -53,7 +54,9 @@ const PurchaseForm = () => {
     //   .catch((error) => {
     //     console.error('Error sending data:', error);
     //   });
-    console.log(dataToSend)
+    // console.log(dataToSend)
+    window.print()
+    console.log("hello")
   };
 
   return (

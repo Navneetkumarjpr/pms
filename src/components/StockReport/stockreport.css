@@ -1,0 +1,16 @@
+.inquantity, .outquantity, .stock{
+    /* width: fit-content; */
+    width: 45px;
+    height: 40px;
+    text-align: center;
+    background-color: rgb(101, 201, 101);
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.outquantity{
+    background-color: rgb(28, 143, 236);
+}
+.stock{
+    background-color: rgb(201, 63, 63);
+}

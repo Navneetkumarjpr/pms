@@ -1,6 +1,8 @@
+import { PDFViewer } from '@react-pdf/renderer';
 import './App.css';
 import Admin from './components/Admin/Admin';
 import AllPurchase from './components/AllPurchase/AllPurchase';
+import ApprovalPurchase from './components/ApprovalPurchase/ApprovalPurchase';
 import CategoryForm from './components/CategoryForm/CategoryForm';
 import CustomerForm from './components/CustomerForm/CustomerForm';
 import HomePage from './components/Home/HomePage';
@@ -17,11 +19,25 @@ import Category from './components/category/Category';
 import Dashboard from './components/dashboard/Dashboard';
 import LoginForm from './components/login/LoginForm';
 import {Routes, Route } from 'react-router-dom';
+import { Fragment } from 'react';
+import StockReport from './components/StockReport/StockReport';
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
+      {/* <Fragment>
+
+<PDFViewer width="1000" height="1000" className="app my-5" >
+      <h1 className='bg-info'>hello</h1>
+      <h1 className='bg-danger'>hello</h1>
+
+      <h1 className='bg-danger'>hello</h1>
+      <h1 className='bg-danger'>hello</h1>
+      <h1 className='bg-danger'>hello</h1>
+
+  </PDFViewer>
+</Fragment> */}
         <Routes> 
           <Route path='/' element={<HomePage/>}/>
           <Route path='login' element={<LoginForm/>}></Route>
@@ -39,6 +55,8 @@ function App() {
             <Route path='manageproductform' element={<ManageProductForm/>}/>
             <Route path='allpurchase' element={<AllPurchase/>}/>
             <Route path='purchaseform' element={<PurchaseForm/>}/>
+            <Route path='approvalpurchase' element={<ApprovalPurchase/>}/>
+            <Route path='stockreport' element={<StockReport/>}/>
           </Route>
          </Routes>
     </div>

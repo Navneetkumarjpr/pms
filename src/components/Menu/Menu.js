@@ -48,17 +48,17 @@ const Menu = () => {
         <Link to='allpurchase' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>All Purchase</Link>
         <br/>
         <br/>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Approval Purchase</Link>
+        <Link to='approvalpurchase' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Approval Purchase</Link>
         </Accordion.Body>
       </Accordion.Item>
       <h2 className='menuhead'>Stock</h2>
       <Accordion.Item eventKey="7">
         <Accordion.Header><i class="fa fa-address-book menuicons" aria-hidden="true"></i>Manage Stock</Accordion.Header>
         <Accordion.Body className='accordbody'>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Stock Report</Link>
+        <Link to='stockreport' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Stock Report</Link>
         <br/>
-        <br/>
-        <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Approval Purchase</Link>
+        {/* <br/> */}
+        {/* <Link to='/' className='menulinks'><i class="fa fa-caret-right menuicons" aria-hidden="true"></i>Approval Purchase</Link> */}
         </Accordion.Body>
       </Accordion.Item>
     </Accordion>
