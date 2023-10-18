@@ -41,23 +41,26 @@ function App() {
         <Routes> 
           <Route path='/' element={<HomePage/>}/>
           <Route path='login' element={<LoginForm/>}></Route>
+          {/* <Route > */}
           <Route path='admin/*' element={<Admin/>}>
-            <Route path='' element={<Dashboard/>} />
-            <Route path='suppliers' element={<Suppliers/>}/>
-            <Route path='supplierform' element={<SupplierForm/>} />
-            <Route path='customers' element={<ManageCustomers/>}/>
-            <Route path='customerform' element={<CustomerForm/>}/>
-            <Route path='unitalldata' element={<UnitAllData/>}/>
-            <Route path='unitform' element={<UnitForm/>}/>
-            <Route path='category' element={<Category/>}/>
-            <Route path='categoryform' element={<CategoryForm/>}/>
-            <Route path='manageproduct' element={<ManageProduct/>}/>
-            <Route path='manageproductform' element={<ManageProductForm/>}/>
-            <Route path='allpurchase' element={<AllPurchase/>}/>
-            <Route path='purchaseform' element={<PurchaseForm/>}/>
-            <Route path='approvalpurchase' element={<ApprovalPurchase/>}/>
-            <Route path='stockreport' element={<StockReport/>}/>
+              <Route path='' element={<Dashboard/>} />
+              <Route path='suppliers' element={<Suppliers/>}/>
+              <Route path='supplierform' element={<SupplierForm/>} />
+              <Route path='customers' element={<ManageCustomers/>}/>
+              <Route path='customerform' element={<CustomerForm/>}/>
+              <Route path='unitalldata' element={<UnitAllData/>}/>
+              <Route path='unitform' element={<UnitForm/>}/>
+              <Route path='category' element={<Category/>}/>
+              <Route path='categoryform' element={<CategoryForm/>}/>
+              <Route path='manageproduct' element={<ManageProduct/>}/>
+              <Route path='manageproductform' element={<ManageProductForm/>}/>
+              <Route path='allpurchase' element={<AllPurchase/>}/>
+              <Route path='purchaseform' element={<PurchaseForm/>}/>
+              <Route path='approvalpurchase' element={<ApprovalPurchase/>}/>
+              <Route path='stockreport' element={<StockReport/>}/>
           </Route>
+          {/* </Route> */}
+          
          </Routes>
     </div>
   );

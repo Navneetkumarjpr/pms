@@ -1,8 +1,9 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import React from 'react'
 import validator from 'validator'
 import "./loginform.css"
 import { Link } from "react-router-dom"
+import { AdminContext } from "../Context/AdminProvider"
 
 const loginitialstate={
   email:'',
@@ -22,6 +23,9 @@ const LoginForm = () => {
     const [emailerror, setEmailerror] = useState(false)
     const [emailerrorsign, setEmailerrorsign] = useState(false)
     const [nameerror, setNameerror] = useState(false)
+
+    
+  const {logoutCall, loginCall} = useContext(AdminContext);
 
     const [passworderror, setPassworderror] = useState("")
     const [signup, setSignup] = useState({
@@ -117,6 +121,13 @@ const LoginForm = () => {
       setViewsign(true);
     }
   }
+
+  const loginsubmit=()=>{
+    // Api calling
+    localStorage.setItem('adminContext',JSON.parse(login))
+    loginCall(login)
+  }
+
   return (
     <div className={`loginsignupform`}>
         <div className='upperbuttonhead'>
@@ -128,8 +139,8 @@ const LoginForm = () => {
           {!emailerror && <p>Error in email</p>}
           <input type='password' name="password" value={login.password} onChange={(e)=>values(e)}  placeholder='Enter Password' required/>
           {passworderror.length>=1 && <p>{passworderror}</p>}
-          {/* <button className='loginbutton'>LogIn</button> */}
-          <Link to='/' className='loginbutton'>LogIn</Link>
+          <button className='loginbutton' onClick={loginsubmit}>LogIn</button>
+          {/* <Link to='/' className='loginbutton'>LogIn</Link> */}
         </div>
         <div className={`signupform  ${viewsign ?"logvisible":"lognotvisible"}`}>
           <input type='text' name="name" value={signup.name} onChange={(e)=>signupValues(e)} placeholder='Enter Name' required/>
